@@ -105,3 +105,6 @@ npm install
 
 <img src="https://ask.dcloud.net.cn/uploads/article/20230712/2dd5bd4d8e384d54d0e9c7ed4667bce7.gif" style="border: 1px solid #cccc;border-radius: 5px;padding: 12px;box-sizing: border-box;">
 
+## 无限嵌套权限路由 
+
+<img src="https://ask.dcloud.net.cn/uploads/article/20230712/7e65f69ae990c4e871f2a5aa54b4c111.gif" style="border: 1px solid #cccc;border-radius: 5px;padding: 12px;box-sizing: border-box;">
