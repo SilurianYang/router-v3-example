@@ -4,6 +4,8 @@
 
 如果你正在使用 `vue3`  + `vite` 请参考 [uni-simple-router v3 路由、拦截、最优雅的解决方案重磅来袭](https://v3.hhyang.cn/blog/function-preview.html)，或者查看 [官方文档](https://v3.hhyang.cn/)
 
+注意：如果图片无法查看，可以在这里[访问国内地址](https://v3.hhyang.cn/blog/v3-example.html)
+
 ## 安装 `uni-simple-router` 
 
 请将已经下载下来后的插件包解压，并放入项目根目录下的 `uni-simple-router` 文件夹中。如果没有 uni-simple-router 文件夹，你必须自己新建一个 uni-simple-router 文件夹，并将插件包放入里面，即可完成安装。
