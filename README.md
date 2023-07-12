@@ -97,10 +97,6 @@ npm install
 <img src="https://ask.dcloud.net.cn/uploads/article/20230712/3103d68b05550a5362e0766d1f71de74.gif" style="border: 1px solid #cccc;border-radius: 5px;padding: 12px;box-sizing: border-box;">
 
 
-## 无限嵌套权限路由 
-
-<img src="https://ask.dcloud.net.cn/uploads/article/20230712/7e65f69ae990c4e871f2a5aa54b4c111.gif" style="border: 1px solid #cccc;border-radius: 5px;padding: 12px;box-sizing: border-box;">
-
 ## 上帝函数组件通讯 
 
 <img src="https://ask.dcloud.net.cn/uploads/article/20230712/489d069e77826ea5160316ad47f0a84f.gif" style="border: 1px solid #cccc;border-radius: 5px;padding: 12px;box-sizing: border-box;">
@@ -108,3 +104,4 @@ npm install
 ## 全局路由守卫 
 
 <img src="https://ask.dcloud.net.cn/uploads/article/20230712/2dd5bd4d8e384d54d0e9c7ed4667bce7.gif" style="border: 1px solid #cccc;border-radius: 5px;padding: 12px;box-sizing: border-box;">
+
