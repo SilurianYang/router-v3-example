@@ -1,0 +1,140 @@
+<template>
+	<view class="container">
+		<my-route-watch />
+		<uni-section title="原生跳转方式" type="line" class="margin-top-sm">
+			<uni-list>
+				<uni-list-item 
+					title="静态地址跳转到新nvue页面" 
+					showArrow :clickable="true"
+					:show-extra-icon="true"
+					@click="goToPage(0,true,`/nvue/static/child`)"
+					:extra-icon="{
+								color: '#4cd964',
+								size: '22',
+								type: 'gear-filled'
+							}"
+				/>
+				<uni-list-item
+					title="动态路由跳转到新nvue页面" 
+					showArrow :clickable="true"
+					:show-extra-icon="true"
+					@click="goToPage(0,true,{
+						name:`nvueIndexChild`,
+						params:{
+							child:`nvueChild`
+						}
+					})"
+					:extra-icon="{
+								color: '#4cd964',
+								size: '22',
+								type: 'gear-filled'
+							}"
+				/>
+				<uni-list-item
+					title="命名路由跳转到新nvue页面" 
+					showArrow :clickable="true"
+					:show-extra-icon="true"
+					@click="goToPage(0,true,{
+						name:`nvueIndexStaticChild`
+					})"
+					:extra-icon="{
+								color: '#4cd964',
+								size: '22',
+								type: 'gear-filled'
+							}"
+				/>
+			</uni-list>
+		</uni-section>
+		
+		<uni-section title="插件跳转方式" type="line" class="margin-top-sm">
+			<uni-list>
+				<uni-list-item
+					title="静态地址跳转到新nvue页面" 
+					showArrow :clickable="true"
+					:show-extra-icon="true"
+					@click="goToPage(0,false,`/nvue/static/child`)"
+					:extra-icon="{
+								color: '#4cd964',
+								size: '22',
+								type: 'gear-filled'
+							}"
+				/>
+				<uni-list-item
+					title="动态路由跳转到新nvue页面" 
+					showArrow :clickable="true"
+					:show-extra-icon="true"
+					@click="goToPage(0,false,{
+						name:`nvueIndexChild`,
+						params:{
+							child:`nvueChild`
+						}
+					})"
+					:extra-icon="{
+								color: '#4cd964',
+								size: '22',
+								type: 'gear-filled'
+							}"
+				/>
+				<uni-list-item
+					title="命名路由跳转到新nvue页面" 
+					showArrow :clickable="true"
+					:show-extra-icon="true"
+					@click="goToPage(0,false,{
+						name:`nvueIndexStaticChild`
+					})"
+					:extra-icon="{
+								color: '#4cd964',
+								size: '22',
+								type: 'gear-filled'
+							}"
+				/>
+			</uni-list>
+		</uni-section>
+		
+	</view>
+</template>
+
+<script setup>
+	import {
+		reactive,
+		ref,
+		watch
+	} from 'vue'
+	const router = uni.$Router
+	const route = uni.$Route
+	
+	watch(route,(value)=>{
+		console.log(`nvue -index 页面 监听 route 成功`)
+		console.log(value)
+	})
+	
+
+	function goToPage(index,useNative = false,option) {
+		const toggleMap = [{
+			native: `navigateTo`,
+			plugin: `push`
+		}, {
+			native: `switchTab`,
+			plugin: `pushTab`
+		}, {
+			native: `redirectTo`,
+			plugin: `replace`
+		}, {
+			native: `reLaunch`,
+			plugin: `replaceAll`
+		}]
+		const {
+			native,
+			plugin
+		} = toggleMap[index]
+		let api = uni[native]
+		if (!useNative) {
+			api = router[plugin]
+		}
+		api(option)
+	}
+</script>
+
+<style>
+
+</style>

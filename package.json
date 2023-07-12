@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@dcloudio/uni-ui": "^1.4.27",
+    "@highlightjs/vue-plugin": "^2.1.0",
+    "highlight.js": "^11.8.0",
+    "qs": "^6.11.1",
+    "query-string": "^8.1.0",
+    "vconsole": "^3.15.0",
+    "vite-plugin-inspect": "^0.7.22",
+    "vue-json-viewer": "^3.0.4"
+  }
+}

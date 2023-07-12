@@ -1,0 +1,49 @@
+<template>
+	<view class="container">
+		<my-route-watch />
+		<uni-section title="该页面路由表信息" type="line" class="margin-top-sm">
+			<div class="container flex justify-center" style="padding-top: 0;">
+				<image 
+					src="~@/static/examples/nvueChildRoute.png" 
+					style="width: 642rpx;height:318rpx ;"
+					mode="aspectFit"
+					@click="previewImage(`../../static/examples/nvueChildRoute.png`)"
+				></image>
+			</div>
+		</uni-section>
+		<uni-section title="提示信息" type="line" class="margin-top-sm">
+			<div class="container" style="padding-top: 0;">
+				<p>1. 该页面在app上为原生渲染</p>
+				<p>2. 在注册路由表时被多个路由表共同引用</p>
+				<p>3. 通过该插件的加持不受任何影响</p>
+				<p>4. 详细见路由表或演示项目源码</p>
+			</div>
+		</uni-section>
+	</view>
+</template>
+
+<script setup>
+	import { onLoad} from '@dcloudio/uni-app'
+	import { computed } from "vue";
+	const router = uni.$Router
+	const route = uni.$Route
+	onLoad((option)=>{
+		const nameToggleMap = {
+			nvueIndexStaticChild:`当前页面匹配到静态路由表`,
+			nvueIndexChild:`当前页面匹配到动态路由表`
+		}
+		const msg = nameToggleMap[route.value.name] 
+		uni.showModal({
+			title:`匹配提示`,
+			content:msg,
+			showCancel:false
+		})
+	})
+	
+	function previewImage(url){
+		uni.previewImage({
+			urls: [url],
+		});
+	}
+	
+</script>

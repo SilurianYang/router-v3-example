@@ -1,0 +1,41 @@
+<template>
+	<view>
+		<div>nvue1</div>
+		<button @click="goToPage({name:`nvue2`})">
+			push-{name:nvue2}
+		</button>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				
+			}
+		},
+		props:[`msg`],
+		setup(props){
+			console.log(props.msg)
+			function goToPage(url){
+				uni.navigateTo(url)
+			}
+			return {
+				goToPage
+			}
+		},
+		onLoad(...options){
+			console.log(options)
+		},
+		onUnload(){
+			console.error(`nvue+++监听页面卸载`)
+		},
+		methods: {
+			
+		}
+	}
+</script>
+
+<style>
+
+</style>
