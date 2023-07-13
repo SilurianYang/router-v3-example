@@ -29,7 +29,12 @@
 				const result= parserInstance(`tabbar2`,[
 					(instance)=>instance.tabbar2Method(`来自me子页面触发`)
 				])
-				console.log(result)
+				if(!result){
+					uni.showToast({
+						title:`tab2页面未挂载`,
+						icon:"error",
+					})
+				}
 			}
 			
 			return {

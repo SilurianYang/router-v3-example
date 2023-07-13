@@ -2,7 +2,7 @@
 	<view>
 		<uni-section title="路由变动观察区" type="line">
 			<div class="routeWatchBox">
-				<uni-easyinput type="textarea" autoHeight v-model="strRoute"></uni-easyinput>
+				<uni-easyinput type="textarea" autoHeight v-model="strRoute" maxlength="-1"></uni-easyinput>
 			</div>
 		</uni-section>
 	</view>

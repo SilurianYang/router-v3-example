@@ -1,5 +1,5 @@
 <template>
-	<view class="container">
+	<view class="container routesContent">
 		<uni-section title="小试牛刀" type="line" class="margin-bottom-sm">
 			<div class="container noPaddingTop">
 				<u-button type="primary" class="margin-bottom-sm" :plain="true" @click="goToPage({
@@ -21,7 +21,7 @@
 		</uni-section>
 		<uni-section title="路由表配置" type="line" class="margin-bottom-sm">
 			<div class="container noPaddingTop">
-				<pre class="previewCodeBox pre">{{routesStr}}</pre>
+				<show-json-cont :json="routesStr"/>
 			</div>
 		</uni-section>
 	</view>

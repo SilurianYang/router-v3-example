@@ -1,6 +1,6 @@
 <template>
 	<view class="container">
-		<h1>home</h1>
+		<h1 class="titleName">home</h1>
 		<div v-if="!isShowChild">
 			<button class="cu-btn block bg-red margin-tb-sm lg" @click="goToPage(`replace`,{
 				name:`customTabbarHomeChild`,
@@ -90,7 +90,3 @@
 		  },
 	}
 </script>
-
-<style lang="stylus" scoped>
-	
-</style>

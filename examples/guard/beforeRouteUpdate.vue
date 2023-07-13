@@ -1,5 +1,5 @@
 <template>
-	<view class="container">
+	<view class="container beforeRouteUpdateContent guardConetnt">
 		<uni-section title="触发提示信息" type="line" class="margin-bottom-sm">
 			<div class="container noPaddingTop">
 				<div class="margin-bottom-sm">
@@ -18,13 +18,18 @@
 		</uni-section>
 		<uni-section title="子路由跳转" type="line" class="margin-bottom-sm">
 			<div class="container">
-				<simple-router-view class="update-simple-router-view"/>
+				<simple-router-view 
+					<!-- #ifndef MP -->
+						class="update-simple-router-view"
+					<!-- #endif -->
+					defClass="update-simple-router-view"
+				/>
 				<u-button type="primary" class="margin-top-sm" :plain="true" @click="gotoPage">跳转到子路由触发守卫</u-button>
 			</div>
 		</uni-section>
 		<uni-section title="守卫代码" type="line" class="margin-top-sm">
 			<div class="container noPaddingTop">
-				<pre class="previewCodeBox pre">{{codeStr}}</pre>
+				<show-json-cont :json="codeStr"/>
 			</div>
 		</uni-section>
 	</view>
@@ -118,9 +123,3 @@ beforeRouteUpdate(to, from) {
 	}
 
 </script>
-<style lang="stylus">
-.update-simple-router-view
-	border: 1rpx dashed #ccc
-	padding: 20rpx
-	box-sizing: border-box
-</style>

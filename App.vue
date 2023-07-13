@@ -31,6 +31,9 @@
 	}
 </script>
 
+<style lang="stylus">
+	@import "./common/base.styl";
+</style>
 <style lang="scss">
 	@import "./colorui/main.css";
 	@import "./colorui/icon.css";

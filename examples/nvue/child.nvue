@@ -2,13 +2,8 @@
 	<view class="container">
 		<my-route-watch />
 		<uni-section title="该页面路由表信息" type="line" class="margin-top-sm">
-			<div class="container flex justify-center" style="padding-top: 0;">
-				<image 
-					src="~@/static/examples/nvueChildRoute.png" 
-					style="width: 642rpx;height:318rpx ;"
-					mode="aspectFit"
-					@click="previewImage(`../../static/examples/nvueChildRoute.png`)"
-				></image>
+			<div class="container flex " style="padding-top: 0;">
+				<my-show-str-code :json="showJson"/>
 			</div>
 		</uni-section>
 		<uni-section title="提示信息" type="line" class="margin-top-sm">
@@ -24,9 +19,23 @@
 
 <script setup>
 	import { onLoad} from '@dcloudio/uni-app'
-	import { computed } from "vue";
+	import { computed,ref } from "vue";
 	const router = uni.$Router
 	const route = uni.$Route
+	
+	const showJson = ref([
+		{
+			path:`/nvue/static/child`,
+			name:`nvueIndexStaticChild`,
+			component:`child.nvue`
+		},
+		{
+			path:`/nvue/dynamic/:child`,
+			name:`nvueIndexChild`,
+			component:`child.nvue`
+		},
+	])
+	
 	onLoad((option)=>{
 		const nameToggleMap = {
 			nvueIndexStaticChild:`当前页面匹配到静态路由表`,

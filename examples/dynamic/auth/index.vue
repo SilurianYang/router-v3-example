@@ -1,5 +1,5 @@
 <template>
-	<view class="container">
+	<view class="container authIndexConent">
 		<my-route-watch/>
 		
 		<uni-section title="页面提示信息" type="line" class="margin-bottom-sm margin-top-sm">
@@ -81,33 +81,3 @@ function goToPage(it){
 
 </script>
 
-<style lang="stylus">
-.topContent
-	margin-bottom: 20rpx
-	border: 1px dashed #ccc
-	border-radius: 4rpx
-	box-sizing: border-box
-	padding:20rpx
-.content
-	display: flex
-	.leftContent
-		border: 1px dashed #ccc
-		border-radius: 4rpx
-		box-sizing: border-box
-		padding:20rpx
-		.item
-			height: 80rpx
-			line-height: 80rpx
-			box-sizing: border-box
-			margin-bottom: 20rpx
-			&:last-child
-				margin-bottom: 0
-			.my-btn-style
-				padding: 0 20rpx
-	.rightContent
-		border: 1px dashed #ccc
-		margin-left: 20rpx
-		border-radius: 4rpx
-		box-sizing: border-box
-		flex: 2
-</style>

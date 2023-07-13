@@ -1,5 +1,5 @@
 <template>
-	<view class="container">
+	<view class="container dynamicContent">
 		<uni-forms :modelValue="baseFormData">
 			<uni-section title="请勾选拥有的权限名" type="line" class="margin-bottom-sm">
 				<div class="container noPaddingTop">
@@ -19,7 +19,7 @@
 		
 		<uni-section title="动态添加的路由表" type="line" class="margin-bottom-sm">
 			<div class="container noPaddingTop">
-				<pre class="previewCodeBox pre" style="min-height: 200rpx;">{{routesStr}}</pre>
+				<show-json-cont :json="routesStr"/>
 			</div>
 		</uni-section>
 		
@@ -34,7 +34,7 @@
 
 <script setup>
 import {dynamicRoutes} from '~@/router/routes/dynamic-addRoue.js'
-import { reactive,ref } from "vue";
+import { reactive,ref,watch } from "vue";
 import {
 	useRouter,
 	useRoute,

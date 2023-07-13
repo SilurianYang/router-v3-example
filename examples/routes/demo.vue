@@ -3,7 +3,7 @@
 		<my-route-watch/>
 		<uni-section title="跳转到该页的参数信息" type="line" class="margin-top-sm">
 			<div class="container noPaddingTop">
-				<pre class="previewCodeBox pre">{{routesStr}}</pre>
+				<show-json-cont :json="routesStr"/>
 			</div>
 		</uni-section>
 	</view>

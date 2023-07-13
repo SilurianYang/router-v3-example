@@ -1,5 +1,5 @@
 <template>
-	<view class="container">
+	<view class="container guardConetnt">
 		<uni-section title="触发提示信息" type="line" class="margin-bottom-sm">
 			<div class="container noPaddingTop">
 				<div class="margin-bottom-sm">
@@ -16,7 +16,7 @@
 		
 		<uni-section title="守卫代码" type="line" class="margin-top-sm">
 			<div class="container noPaddingTop">
-				<pre class="previewCodeBox pre">{{codeStr}}</pre>
+				<show-json-cont :json="codeStr"/>
 			</div>
 		</uni-section>
 	</view>

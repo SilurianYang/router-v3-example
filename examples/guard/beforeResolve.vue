@@ -1,5 +1,5 @@
 <template>
-	<view class="container">
+	<view class="container guardConetnt">
 		<uni-section title="触发提示信息" type="line" class="margin-bottom-sm">
 			<div class="container noPaddingTop">
 				<div class="margin-bottom-sm">
@@ -9,19 +9,20 @@
 					2. 区别在于前者会在解析所有组件内守卫和异步路由组件之后
 				</div>
 				<div style="color: #f00;font-weight: bold;">
-					3. 小程序下的物理返回和原生header返回会触发该守卫但无法执行拦截
+					3. 小程序下的物理返回和原生header返回时该守卫无效
 				</div>
 			</div>
 		</uni-section>
 		<uni-section title="守卫代码" type="line" class="margin-top-sm">
 			<div class="container noPaddingTop">
-				<pre class="previewCodeBox pre">{{codeStr}}</pre>
+				<show-json-cont :json="codeStr"/>
 			</div>
 		</uni-section>
 	</view>
 </template>
 
 <script setup>
+	import { onUnload } from '@dcloudio/uni-app'
 import {useRouter} from '@/uni-simple-router'
 import {
 	computed,
@@ -73,5 +74,9 @@ const guard = router.beforeResolve((to,from)=>{
 			}
 		})
 	})
+})
+
+onUnload(()=>{
+	guard();
 })
 </script>

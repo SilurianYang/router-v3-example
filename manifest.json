@@ -1,5 +1,5 @@
 {
-    "name" : "com.ksq8825.test",
+    "name" : "uni-simple-router示例",
     "appid" : "__UNI__93E1F17",
     "description" : "",
     "versionName" : "1.0.0",
@@ -35,7 +35,8 @@
                     "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
                     "<uses-feature android:name=\"android.hardware.camera\"/>",
                     "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
-                ]
+                ],
+                "minSdkVersion" : 21
             },
             /* ios打包配置 */
             "ios" : {
@@ -51,7 +52,7 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "wx29e4a451db1b5f55",
+        "appid" : "wx857b3a454bf68899",
         "setting" : {
             "urlCheck" : false
         },
@@ -83,7 +84,7 @@
     },
     "h5" : {
         "router" : {
-            "base" : ""
+            "base" : "/example/"
         },
         "devServer" : {
             "https" : false

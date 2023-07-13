@@ -19,7 +19,7 @@ function androidQuitApp(){
 /**
  * 是否开启随机动画
  */
-const randomAnimation = true;
+const randomAnimation = false;
 
 const router = createRouter({
 	platform: process.env.VUE_APP_PLATFORM,
@@ -119,7 +119,7 @@ router.beforeEach(async (to,from)=>{
 	console.error(`------- beforeEach守卫执行 ------`)
 	// // #ifdef MP
 	if(appRunCount === 0){
-		await timeOut(2000)
+		await timeOut(1000)
 	}
 	appRunCount++
 	// #endif

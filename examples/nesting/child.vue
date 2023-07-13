@@ -1,5 +1,5 @@
 <template>
-	<view class="container">
+	<view class="container" style="width: 100%">
 		<h3 class="margin-bottom-sm">child - nesting - {{depth}}</h3>
 		<uni-section title="不会丢失的状态" type="line">
 			<div class="padding-sm" style="padding-top: 0;">
@@ -50,7 +50,3 @@ function randomRgbColor() {
 
 </script>
 
-<style lang="stylus">
-.container
-	width: 100%
-</style>

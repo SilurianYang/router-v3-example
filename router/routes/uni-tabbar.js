@@ -22,11 +22,11 @@ export const uniTabbar = [
 				pageType: `top`
 			}),
 		},
-		{
-			"path": "/tabbar3",
-			"name": "tabbar3",
-			component: __dynamicImportComponent__("@/tabbar/tabbar3/tabbar3.vue", {
-				pageType: `top`
-			}),
-		}
+		// {
+		// 	"path": "/tabbar3",
+		// 	"name": "tabbar3",
+		// 	component: __dynamicImportComponent__("@/tabbar/tabbar3/tabbar3.vue", {
+		// 		pageType: `top`
+		// 	}),
+		// }
 ]

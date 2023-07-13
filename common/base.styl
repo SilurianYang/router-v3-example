@@ -1,0 +1,105 @@
+.tabbarIndexContent
+	padding-bottom: 55px
+	.cu-bar.tabbar
+		position: fixed
+		bottom: 0
+		width:100%
+
+.authIndexConent
+	.topContent
+		margin-bottom: 20rpx
+		border: 1px dashed #ccc
+		border-radius: 4rpx
+		box-sizing: border-box
+		padding:20rpx
+	.content
+		display: flex
+		.leftContent
+			border: 1px dashed #ccc
+			border-radius: 4rpx
+			box-sizing: border-box
+			padding:20rpx
+			.item
+				// height: 80rpx
+				// line-height: 80rpx
+				box-sizing: border-box
+				margin-bottom: 20rpx
+				&:last-child
+					margin-bottom: 0
+				.my-btn-style
+					display: flex;
+					/* #ifndef MP */
+					padding: 0 20rpx
+					/* #endif */
+				.u-btn
+					/* #ifdef MP */
+					padding: 0 20rpx
+					/* #endif */
+		.rightContent
+			border: 1px dashed #ccc
+			margin-left: 20rpx
+			border-radius: 4rpx
+			box-sizing: border-box
+			flex: 2
+
+.baseChildBotton
+	.box
+		margin-bottom: 30rpx
+		&:last-child
+			margin-bottom: 0
+			
+.nestingContent
+	.content
+		width: 100%
+		.previewCodeBox
+			min-width: 100%
+	.parent-simple-router-view
+		border-radius: 4rpx
+		border: 1px dashed #ccc
+
+/* #ifdef MP */
+.nestingContent,.routesContent,.dynamicContent,.animationContent
+	.margin-bottom-sm
+		.uni-section
+			margin-bottom: 20rpx;
+/* #endif */
+
+.animationContent,.routesContent
+	/* #ifdef MP */
+	.u-btn
+		margin-bottom: 20rpx
+	/* #endif */
+
+.container404Content
+	.text-jumbo
+		margin: 20rpx 0
+		font-size: 30rpx;
+		color: #a9a9a9;
+
+.beforeRouteUpdateContent
+	.update-simple-router-view
+		border: 1rpx dashed #ccc
+		padding: 20rpx
+		box-sizing: border-box
+
+.tabbar2Content
+	.desc_box
+		display: flex
+		flex-direction: column
+		.title
+			font-size: 28rpx
+			margin: 20rpx 0
+			display: flex
+			justify-content: center
+			color: #2979ff;
+			font-weight: bold
+		.desc
+			margin-top: 30rpx
+			text-indent: 20rpx
+			
+/* #ifdef MP */
+.tabbar2Content,.tabbarIndexContent,.overviewContent,.animationContent,.guardConetnt
+	.margin-top-sm
+		.uni-section
+			margin-top: 20rpx
+/* #endif */

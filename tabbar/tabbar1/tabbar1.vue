@@ -35,7 +35,7 @@
 			
 			<uni-list-item @click="goToPage({
 				name:`redirectRoutes`,
-			},`replaceAll`)" :show-extra-icon="true" showArrow :clickable="true" :extra-icon="extraIcon" title="关闭所有页面+出现小房子" />
+			},`replaceAll`)" :show-extra-icon="true" showArrow :clickable="true" :extra-icon="extraIcon" title="关闭所有页面+没有小房子" />
 		
 		</uni-section>
 		<my-route-watch/>

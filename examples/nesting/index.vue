@@ -1,5 +1,5 @@
 <template>
-	<view class="container">
+	<view class="container nestingContent">
 		<uni-section title="新增一个路由并嵌套" type="line" class="margin-bottom-sm">
 			<div class="container noPaddingTop">
 				<u-button 
@@ -29,16 +29,7 @@
 		</uni-section>
 		<uni-section title="路由表" type="line" class="margin-bottom-sm">
 			<div class="content noPaddingTop">
-				// #ifdef MP
-				<div class="previewCodeBox pre" style="min-height: 200rpx;">
-					<text>{{ routesStr.replace(/\n(\s*)/g,(t,$1)=>(t+`&nbsp;`.repeat($1.length))) }}</text>
-				</div>
-				// #endif
-				
-				
-				// #ifndef MP
-				<pre class="previewCodeBox pre" style="min-height: 200rpx;">{{routesStr}}</pre>
-				// #endif
+				<show-json-cont :json="routesStr"/>
 			</div>
 		</uni-section>
 	</view>
@@ -187,12 +178,3 @@ onUnload(()=>{
 })
 </script>
 
-<style lang="stylus">
-.content
-	width: 100%
-	.previewCodeBox
-		min-width: 100%
-.parent-simple-router-view
-	border-radius: 4rpx
-	border: 1px dashed #ccc
-</style>

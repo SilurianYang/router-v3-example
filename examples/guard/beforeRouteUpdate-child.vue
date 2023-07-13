@@ -1,5 +1,5 @@
 <template>
-	<view class="container">
+	<view class="container baseChildBotton">
 		<div class="box" v-for="it in 5" :key="it">
 			<u-button
 				type="success" 
@@ -21,9 +21,3 @@
 		}
 	}
 </script>
-<style lang="stylus">
-.box
-	margin-bottom: 30rpx
-	&:last-child
-		margin-bottom: 0
-</style>

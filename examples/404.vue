@@ -1,5 +1,5 @@
 <template>
-	<view class="container">
+	<view class="container container404Content">
 		<div class="flex flex-direction align-center ">
 			<image src="../static/examples/page.png" style="width: 600rpx; height:600rpx"></image>
 			<div class="text-jumbo">
@@ -18,10 +18,3 @@
 <script setup>
 
 </script>
-
-<style lang="stylus">
-.text-jumbo
-	margin: 20rpx 0
-	font-size: 30rpx;
-	color: #a9a9a9;
-</style>

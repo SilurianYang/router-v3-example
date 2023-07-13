@@ -1,5 +1,5 @@
 <template>
-	<view class="container">
+	<view class="container animationContent">
 		<uni-notice-bar single show-icon text="当前状态下需要按两次返回才能退出该页" v-if="isChildPath"/>
 		<uni-forms ref="baseForm" :modelValue="baseFormData">
 			<my-route-watch/>
@@ -223,7 +223,3 @@ async function goToPage(option){
 	router.replace(option)
 }
 </script>
-
-<style>
-
-</style>

@@ -1,5 +1,5 @@
 <template>
-	<view class="tabbarIndex">
+	<view class="tabbarIndex tabbarIndexContent">
 		<div class="container">
 			<uni-section title="不会丢失的状态" type="line">
 				<div class="padding-sm" style="padding-top: 0;">
@@ -200,12 +200,3 @@ import {onReady,onShow,onHide,onUnload,onPageScroll} from '@dcloudio/uni-app'
 		  },
 	}
 </script>
-
-<style lang="stylus" scoped>
-	.tabbarIndex
-		padding-bottom: 55px
-	.tabbar
-		position: fixed
-		bottom: 0
-		width:100%
-</style>
