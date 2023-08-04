@@ -1,0 +1,1 @@
+mklink /d "E:\My git\router-v3-example\uni-simple-router" "E:\My git\uni-simple-router-v3\packages\uni-simple-router-v3\dist"

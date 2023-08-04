@@ -12,6 +12,14 @@ export const customTabbar=[{
 			// 	name: `examples/tabbar`
 			// },
 		}),
+		redirect:(to)=>{
+			return {
+				name:`customTabbarHomeChild`,
+				params:{
+					id:999
+				}
+			}
+		},
 		children:[
 			{
 				path:`home`,
@@ -28,7 +36,7 @@ export const customTabbar=[{
 						name:`customTabbarHomeChild`,
 						component:__dynamicImportComponent__(`~@/examples/tabbar/children/children/commonChild.vue`)
 					}
-				]
+				],
 			},
 			{
 				path:`class`,

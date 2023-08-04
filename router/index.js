@@ -3,8 +3,17 @@ import {
 	toIsNewWindow
 } from '@/uni-simple-router'
 import {routes} from './routes'
-import {nextTick} from 'vue'
+import {nextTick,createApp} from 'vue'
 import {timeOut} from '~@/utils/index.js'
+import FloatLayerCom from '@/components/float-layer.vue'
+
+// #ifdef H5
+const floatLayerApp = createApp(FloatLayerCom);
+const mountEl = document.createElement(`div`);
+mountEl.id="floatLayerApp";
+document.body.appendChild(mountEl);
+floatLayerApp.mount(`#floatLayerApp`)
+// #endif
 
 function androidQuitApp(){
 	uni.showModal({
@@ -14,6 +23,14 @@ function androidQuitApp(){
 			confirm && plus.runtime.quit();
 		}
 	});
+}
+
+function changeFloat(status,to){
+	// #ifdef H5
+	if(to.navType!==`back`){
+		floatLayerApp._instance.setupState.toggleFloat(status);
+	}
+	// #endif
 }
 
 /**
@@ -117,18 +134,23 @@ const router = createRouter({
 let appRunCount = 0
 router.beforeEach(async (to,from)=>{
 	console.error(`------- beforeEach守卫执行 ------`)
-	// // #ifdef MP
+	changeFloat(`load`,to);
+	
+	// #ifdef MP
 	if(appRunCount === 0){
 		await timeOut(1000)
 	}
 	appRunCount++
 	// #endif
-	
+
 })
 
 router.afterEach(async (to,from)=>{
 	console.error(`++++++ afterEach守卫执行 +++++++`)
 	console.log(router)
+	
+	changeFloat(`success`,to);
+	
 	if(to.meta && to.meta.title){
 		// #ifdef H5
 		await timeOut(1)

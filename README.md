@@ -1,10 +1,10 @@
 # router-v3-example
 
-要运行示例功能非常简单，但在此之前，您必须已经获得授权并下载了 `uni-simple-router` `v3` 版本。如果您尚未获得授权或未下载，[请点击此处获取授权和下载](https://v3.hhyang.cn/buy-code/view-auth.html)。
+要运行示例功能非常简单，但在此之前，您必须已经获得授权并下载了 `uni-simple-router` `v3` 版本。如果您尚未获得授权或未下载，[请点击此处获取授权和下载](https://www.hhyang.cn/buy-code/view-auth.html)。
 
-如果你正在使用 `vue3`  + `vite` 请参考 [uni-simple-router v3 路由、拦截、最优雅的解决方案重磅来袭](https://v3.hhyang.cn/blog/function-preview.html)，或者查看 [官方文档](https://v3.hhyang.cn/)
+如果你正在使用 `vue3`  + `vite` 请参考 [uni-simple-router v3 路由、拦截、最优雅的解决方案重磅来袭](https://www.hhyang.cn/blog/function-preview.html)，或者查看 [官方文档](https://www.hhyang.cn/)
 
-注意：如果图片无法查看，可以在这里[访问国内地址](https://v3.hhyang.cn/blog/v3-example.html)
+注意：如果图片无法查看，可以在这里[访问国内地址](https://www.hhyang.cn/blog/v3-example.html)
 
 ## 安装 `uni-simple-router` 
 
