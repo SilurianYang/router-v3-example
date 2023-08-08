@@ -55,7 +55,7 @@ const router = createRouter({
 		launchedHook:()=>{
 			console.log(`首页进入成功`)
 		},
-		hideHomeButton:true
+		// hideHomeButton:true
 	},
 	app:{
 		setSideSlipGesture:(to)=>{
@@ -134,6 +134,9 @@ const router = createRouter({
 let appRunCount = 0
 router.beforeEach(async (to,from)=>{
 	console.error(`------- beforeEach守卫执行 ------`)
+	console.log(to)
+	console.log(from)
+	
 	changeFloat(`load`,to);
 	
 	// #ifdef MP
@@ -142,7 +145,8 @@ router.beforeEach(async (to,from)=>{
 	}
 	appRunCount++
 	// #endif
-
+	
+	
 })
 
 router.afterEach(async (to,from)=>{

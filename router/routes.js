@@ -26,6 +26,26 @@ export const routes = [
 	...demoRoutes,
 	...guardRoutes,
 	{
+		path: '/pages/login/index',
+		name: 'myLoginXxxx',
+		component: __dynamicImportComponent__(`@/examples/login.vue`, {
+		  pageType: 'top',
+		  style: {
+			navigationStyle: 'custom',
+		  },
+		}),
+		meta: {
+		  // 是否开启自定义导航栏
+		  customNavigationBar: false,
+		  // 导航栏标题
+		  title: '登陆',
+		  // 是否需要认证
+		  requiresAuth: false,
+		  // 是否允许标签植入
+		  implant: true,
+		},
+	},
+	{
 		"children": [{
 			"components": {
 				"default": __dynamicImportComponent__('../pagesMain/content.vue'),
