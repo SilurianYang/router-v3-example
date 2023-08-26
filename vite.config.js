@@ -17,6 +17,13 @@ export default defineConfig({
 			pluginPath:`./uni-simple-router`,
 			excludeCallBack:(str)=>{
 				// console.log(`排除成功文件：${str}`)
+			},
+			applet:{
+				enterPage:{
+					style:{
+						navigationStyle:`default`
+					}
+				}
 			}
 		}),
         uni()

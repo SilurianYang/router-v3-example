@@ -36,6 +36,13 @@
 			<uni-list-item @click="goToPage({
 				name:`redirectRoutes`,
 			},`replaceAll`)" :show-extra-icon="true" showArrow :clickable="true" :extra-icon="extraIcon" title="关闭所有页面+没有小房子" />
+			
+			<uni-list-item @click="goToPage({
+				name:`repeatAction`,
+				params:{
+					time:+new Date()
+				}
+			})" :show-extra-icon="true" showArrow :clickable="true" :extra-icon="extraIcon" title="重复跳转 + 自己跳自己" />
 		
 		</uni-section>
 		<my-route-watch/>

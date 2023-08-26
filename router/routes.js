@@ -12,6 +12,7 @@ import {nestingRoutes} from './routes/nesting.js'
 import {animationRoutes} from './routes/animation.js'
 import {demoRoutes} from './routes/demo-routes.js'
 import {guardRoutes} from './routes/guard.js'
+import {repeatRoutes} from './routes/repeat.js'
 
 const contentCom = __dynamicImportComponent__(`@/tabbar/tabbar1/children/content.vue`)
 
@@ -25,14 +26,12 @@ export const routes = [
 	...animationRoutes,
 	...demoRoutes,
 	...guardRoutes,
+	...repeatRoutes,
 	{
 		path: '/pages/login/index',
 		name: 'myLoginXxxx',
 		component: __dynamicImportComponent__(`@/examples/login.vue`, {
 		  pageType: 'top',
-		  style: {
-			navigationStyle: 'custom',
-		  },
 		}),
 		meta: {
 		  // 是否开启自定义导航栏
