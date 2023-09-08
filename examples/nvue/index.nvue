@@ -90,7 +90,6 @@
 				/>
 			</uni-list>
 		</uni-section>
-		
 	</view>
 </template>
 
@@ -107,7 +106,6 @@
 		console.log(`nvue -index 页面 监听 route 成功`)
 		console.log(value)
 	})
-	
 
 	function goToPage(index,useNative = false,option) {
 		const toggleMap = [{

@@ -12,7 +12,7 @@ import {nestingRoutes} from './routes/nesting.js'
 import {animationRoutes} from './routes/animation.js'
 import {demoRoutes} from './routes/demo-routes.js'
 import {guardRoutes} from './routes/guard.js'
-import {repeatRoutes} from './routes/repeat.js'
+import {fixbugRoutes} from './routes/fixbug.js'
 
 const contentCom = __dynamicImportComponent__(`@/tabbar/tabbar1/children/content.vue`)
 
@@ -26,7 +26,7 @@ export const routes = [
 	...animationRoutes,
 	...demoRoutes,
 	...guardRoutes,
-	...repeatRoutes,
+	...fixbugRoutes,
 	{
 		path: '/pages/login/index',
 		name: 'myLoginXxxx',
