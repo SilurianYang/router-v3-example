@@ -1,10 +1,10 @@
 import { defineConfig } from "vite";
 import uni from "@dcloudio/vite-plugin-uni";
 // 线上包
-import vitePluginUniRouter from  `./uni-simple-router/compiler`
+// import vitePluginUniRouter from  `./uni-simple-router/compiler`
 
 //本地包
-// import vitePluginUniRouter from  `E:/My-git/uni-simple-router-v3/packages/vite-plugin-router/dist/vite-plugin-router.js`
+import vitePluginUniRouter from  `E:/My-git/uni-simple-router-v3/packages/vite-plugin-router/dist/vite-plugin-router.js`
 
 
 /**

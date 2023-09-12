@@ -36,6 +36,8 @@
 			 <!-- #endif -->
 			 
 		</div>
+		
+		<button @click="sdasdasdsa">测试</button>
 		<view class="cu-bar tabbar bg-white">
 			<view 
 				class="action" 
@@ -179,10 +181,18 @@ import {onReady,onShow,onHide,onUnload,onPageScroll} from '@dcloudio/uni-app'
 					console.error(e)
 				})
 			}
+			
+			function sdasdasdsa(){
+				router.push({
+					name:`issues_8bug`
+				})
+			}
+			
 			return {
 				tabComputedIndex,
 				changeTab,
 				list,
+				sdasdasdsa
 			}
 		},
 		beforeRouteEnter(to, from) {
