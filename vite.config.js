@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import uni from "@dcloudio/vite-plugin-uni";
+import {resolve} from 'path'
 // 线上包
 // import vitePluginUniRouter from  `./uni-simple-router/compiler`
 
@@ -15,6 +16,7 @@ export default defineConfig({
 		vitePluginUniRouter({
 			routesMain:'./router/routes.js',
 			pluginPath:`./uni-simple-router`,
+			// pluginPath:'E:/My-git/router-v3-example/node_modules/@hhyang/uni-simple-router',
 			excludeCallBack:(str)=>{
 				// console.log(`排除成功文件：${str}`)
 			},

@@ -10,6 +10,33 @@
 
 请将已经下载下来后的插件包解压，并放入项目根目录下的 `uni-simple-router` 文件夹中。如果没有 uni-simple-router 文件夹，你必须自己新建一个 uni-simple-router 文件夹，并将插件包放入里面，即可完成安装。
 
+## 更换 `vitePluginUniRouter` 路径
+```js
+import { defineConfig } from "vite";
+import uni from "@dcloudio/vite-plugin-uni";
+import {resolve} from 'path'
+// 线上包
+import vitePluginUniRouter from  `./uni-simple-router/compiler`
+
+/**
+ * @type {import('vite').UserConfig}
+ */
+export default defineConfig({
+    plugins: [
+		vitePluginUniRouter({
+            // ....
+		}),
+        uni()
+	]
+});
+
+```
+> 确保本地包路径已经被删除，删除如下路径即可↓↓↓↓↓
+```js
+//本地包
+import vitePluginUniRouter from  `E:/My-git/uni-simple-router-v3/packages/vite-plugin-router/dist/vite-plugin-router.js`
+```
+
 ### 目录结构
 ```sh
 C:\Users\Administrator\Desktop\v3-example

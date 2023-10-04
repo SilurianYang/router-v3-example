@@ -57,7 +57,7 @@
 	import{
 		getCurrentInstance
 	} from 'vue'
-	import { onShow,onHide,onUnload,onLoad } from '@dcloudio/uni-app'
+	import { onShow,onHide,onUnload,onLoad,onPageScroll  } from '@dcloudio/uni-app'
 	
 	
 	export default {
@@ -101,6 +101,9 @@
 			})
 			onUnload(()=>{
 				console.warn(`组合api ++++ /tabbar/tabbar1/tabbar1 --- onUnload`)
+			})
+			onPageScroll((e)=>{
+				console.log(` 组合api ++++ /tabbar/tabbar1/tabbar1 开始滚动：${e.scrollTop} `)
 			})
 			
 			return {

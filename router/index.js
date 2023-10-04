@@ -146,6 +146,13 @@ router.beforeEach(async (to,from)=>{
 	appRunCount++
 	// #endif
 	
+	// #ifdef APP
+	if(appRunCount === 0){
+		await timeOut(5000)
+	}
+	appRunCount++
+	// #endif
+	
 	
 })
 
