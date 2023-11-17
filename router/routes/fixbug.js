@@ -131,6 +131,46 @@ export const fixbugRoutes = [
 			pageType: `top`,
 		})
 	},
+	{
+		path: `/issues_13/bug`,
+		name: `issues_13bug`,
+		component: __dynamicImportComponent__(`~@/examples/fixbug/issues_13/index.vue`, {
+			pageType: `top`,
+		}),
+		meta:{
+			menus:{
+				navInfo:{
+					name:`issues_13bug`,
+				},
+				title:`issues_13 + 【APP】`
+			},
+		},
+	},
+	{
+		path: `/issues_13/bug/child`,
+		name: `issues_13bug_child`,
+		component: __dynamicImportComponent__(`~@/examples/fixbug/issues_13/child.vue`, {
+			pageType: `top`,
+		})
+	},
+	{
+		path: `/issues_14/bug/:id`,
+		name: `issues_14bug`,
+		component: __dynamicImportComponent__(`~@/examples/fixbug/issue_14/index.vue`, {
+			pageType: `top`,
+		}),
+		meta:{
+			menus:{
+				navInfo:{
+					name:`issues_14bug`,
+					params:{
+						id:+new Date()
+					}
+				},
+				title:`issues_14 + 【小程序】`
+			},
+		},
+	},
 ]
 
 

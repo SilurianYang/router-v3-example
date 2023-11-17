@@ -57,7 +57,7 @@
 	import{
 		getCurrentInstance
 	} from 'vue'
-	import { onShow,onHide,onUnload,onLoad,onPageScroll  } from '@dcloudio/uni-app'
+	import { onShow,onHide,onUnload,onLoad,onPageScroll,onReachBottom} from '@dcloudio/uni-app'
 	
 	
 	export default {
@@ -104,6 +104,9 @@
 			})
 			onPageScroll((e)=>{
 				console.log(` 组合api ++++ /tabbar/tabbar1/tabbar1 开始滚动：${e.scrollTop} `)
+			})
+			onReachBottom((e)=>{
+				console.warn(`已经滚动到了底部`)
 			})
 			
 			return {

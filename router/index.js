@@ -45,7 +45,7 @@ const router = createRouter({
 	// 	to:`/?id=6666`,
 	// 	navType: process.env.VUE_APP_PLATFORM.includes(`mp-`) ? `pushTab` : `replaceAll`
 	// },
-	routeNotFound:(to)=>{
+	routeNotFound:async (to)=>{
 		return {
 			name:`404`,
 			navType:`push`
