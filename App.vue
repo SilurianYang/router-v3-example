@@ -16,12 +16,6 @@
 		setup(){
 			console.log('setup -- app.vue');
 			const route = useRoute();
-			watch(route,(v)=>{
-				console.log(
-					JSON.stringify(v)
-				)
-			})
-			
 			
 			onLaunch(()=>{
 				

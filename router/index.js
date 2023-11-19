@@ -1,6 +1,7 @@
 import {
 	createRouter,
-	toIsNewWindow
+	toIsNewWindow,
+	parserInstance
 } from '@/uni-simple-router'
 import {routes} from './routes'
 import {nextTick,createApp} from 'vue'
@@ -38,6 +39,7 @@ function changeFloat(status,to){
  */
 const randomAnimation = false;
 
+
 const router = createRouter({
 	platform: process.env.VUE_APP_PLATFORM,
 	// hotRefresh:{
@@ -45,11 +47,19 @@ const router = createRouter({
 	// 	to:`/?id=6666`,
 	// 	navType: process.env.VUE_APP_PLATFORM.includes(`mp-`) ? `pushTab` : `replaceAll`
 	// },
-	routeNotFound:async (to)=>{
+	// routeNotFound:async (to)=>{
+	// 	console.log(to)
+	// 	await timeOut(2000)
+	// 	return {
+	// 		name:`404`,
+	// 		navType:`push`
+	// 	}
+	// },
+	routeNotFound:(to)=>{
 		return {
-			name:`404`,
-			navType:`push`
-		}
+				name:`404`,
+				navType:`push`
+			}
 	},
 	applet:{
 		launchedHook:()=>{

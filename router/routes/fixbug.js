@@ -171,8 +171,67 @@ export const fixbugRoutes = [
 			},
 		},
 	},
+	// #ifndef MP
+		{
+			path: `/issues_16/bug`,
+			name: `issues_16bug`,
+			component: __dynamicImportComponent__(`~@/examples/fixbug/issue_16/index.vue`, {
+				pageType: `top`,
+			}),
+			meta:{
+				menus:{
+					navInfo:{
+						name:`issues_16bug`
+					},
+					title:`issues_16 + 【H5】`
+				},
+			},
+			children:[
+				{
+					path: `test1/:id`,
+					name: `issues_16bug_test1`,
+					component: __dynamicImportComponent__(`~@/examples/fixbug/issue_16/child/child1.vue`),
+					meta:{
+						transition:`animate__fadeInDown`
+					}
+				},
+				{
+					path: `test2`,
+					name: `issues_16bug_test2`,
+					component: __dynamicImportComponent__(`~@/examples/fixbug/issue_16/child/child2.vue`),
+					meta:{
+						transition:`animate__fadeInRight`
+					}
+				}
+			]
+		},
+	// #endif
+	{
+		path: `/issues_17/bug`,
+		name: `issues_17bug`,
+		component: __dynamicImportComponent__(`~@/examples/fixbug/issue_17/index.vue`, {
+			pageType: `top`,
+		}),
+		meta:{
+			menus:{
+				navInfo:{
+					name:`issues_17bug`,
+					params:{
+						id:+new Date()
+					}
+				},
+				title:`issues_17 + 【H5|APP|小程序】`
+			},
+		},
+	},
+	{
+		path: `/issues_17/bug/child1`,
+		name: `issues_17bug_child1`,
+		component: __dynamicImportComponent__(`~@/examples/fixbug/issue_17/index2.vue`, {
+			pageType: `top`,
+		}),
+	},
 ]
-
 
 export function createMenus(){
 	const listMenus = [];
