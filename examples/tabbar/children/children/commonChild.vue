@@ -1,7 +1,7 @@
 <template>
 	<view class="container">
 		<view class="cu-bar bg-black">
-			<view class="action" @click="router.back()">
+			<view class="action" @click="$Router.back()">
 				<text class="cuIcon-back text-gray"></text> 返回
 			</view>
 		</view>
@@ -13,7 +13,7 @@
 	</view>
 </template>
 
-<script setup>
+<!-- <script setup>
 import {computed, ref,onBeforeUpdate,onMounted,onBeforeUnmount} from 'vue'
 import {useRouter,useRoute,onBeforeRouteUpdate,onBeforeRouteLeave} from '@/uni-simple-router'
 
@@ -68,7 +68,49 @@ onBeforeRouteLeave((to, from)=>{
 })
 
 </script>
-
+ -->
+ 
+ <script>
+	 export default {
+		 data(){
+			 return {
+				 dataInfo:1111,
+				 pageTitle:`home - commonChild`
+			 }
+		 },
+		 beforeRouteLeave(to,from){
+			 console.log(this)
+			 return new Promise(resolve=>{
+			 	if(to.navType === `back`){
+			 		return resolve(true)
+			 	}
+			 	if(from.navType === `push`){
+			 		uni.showModal({
+			 			title: '拦截提示',
+			 			content: `push进入的该页面，只能返回操作`,
+			 			confirmText:`返回`,
+			 			success: ({confirm}) => {
+			 				if(!confirm){
+			 					uni.showToast({
+			 						title: `你取消了本次导航`,
+			 					    icon:`none`,
+			 						duration: 1000
+			 					});
+			 					return resolve(false)
+			 				}
+			 				resolve({
+			 					...to,
+			 					navType:`back`
+			 				})
+			 			}
+			 		});
+			 	}else{
+			 		return resolve(true)
+			 	}
+			 })
+		 }
+	 }
+ </script>
 <style>
 
 </style>

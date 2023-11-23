@@ -1,7 +1,7 @@
 <script>
 	import {getCurrentInstance,watch} from 'vue'
 	import { onLaunch,onShow,onHide} from '@dcloudio/uni-app'
-	import {useRoute} from '@/uni-simple-router'
+	import {useRoute,useRouter} from '@/uni-simple-router'
 	
 	export default {
 		onLaunch: function() {
@@ -15,11 +15,18 @@
 		},
 		setup(){
 			console.log('setup -- app.vue');
-			const route = useRoute();
 			
 			onLaunch(()=>{
 				
 				console.log('setup -- app.vue - onLaunch');
+				
+				const route = useRoute();
+				const router = useRouter()
+				watch(route,(val)=>{
+					console.log(val)
+					console.log(router.history)
+				})
+				
 			})
 			onShow(()=>{
 				

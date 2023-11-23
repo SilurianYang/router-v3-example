@@ -168,7 +168,6 @@ router.beforeEach(async (to,from)=>{
 
 router.afterEach(async (to,from)=>{
 	console.error(`++++++ afterEach守卫执行 +++++++`)
-	console.log(router)
 	
 	changeFloat(`success`,to);
 	
@@ -180,6 +179,7 @@ router.afterEach(async (to,from)=>{
 			title:to.meta.title
 		})
 	}
+	
 })
 
 router.onError(e=>{

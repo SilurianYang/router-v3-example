@@ -21,6 +21,12 @@
 				<show-json-cont :json="codeStr"/>
 			</div>
 		</uni-section>
+		
+		<uni-section title="可控的返回" type="line" class="margin-top-sm">
+			<div class="container noPaddingTop">
+				<button @click="$Router.back(1)">返回</button>
+			</div>
+		</uni-section>
 	</view>
 </template>
 
@@ -53,7 +59,7 @@
 	export default {
 		data() {
 			return {
-				
+				pageInfo:`beforeRouteLeave页面参数`
 			}
 		},
 		setup(){
@@ -96,7 +102,13 @@ beforeRouteLeave(to, from) {
 			}
 		},
 		beforeRouteLeave(to,from){
+			console.warn(this.pageInfo)
 			return commonModal(`选项`);
+		},
+		methods:{
+			pageMethods(){
+				console.error('page- pageMethods：'+this.pageInfo)
+			}
 		}
 	}
 </script>
