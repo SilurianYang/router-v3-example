@@ -1,7 +1,8 @@
 import {
 	createRouter,
 	toIsNewWindow,
-	parserInstance
+	parserInstance,
+	preloadRoutes
 } from '@/uni-simple-router'
 import {routes} from './routes'
 import {nextTick,createApp} from 'vue'
@@ -185,5 +186,33 @@ router.afterEach(async (to,from)=>{
 router.onError(e=>{
 	console.log(e)
 })
+
+window.dasdsadadasdasd = (name)=>{
+	 parserInstance(name,[
+	    (instance)=>{
+	      instance.notify(`来自星星的它`)
+		  // instance.$.exposed.notify(`来自星星的它`);
+	    }
+	  ]) || uni.showToast({
+		title:`${name}页面未挂载`,
+		icon:"error",
+	})
+};
+
+// window.dasdsadadasdasd =()=>{
+// 	router.isReady().then(()=>{
+// 		preloadRoutes(['customTabbarHomeChild','customTabbarClass','customTabbarRelease','customTabbarNews','customTabbarMe']).then(res=>{
+// 			console.log(res)
+// 		});
+// 	})
+// }
+
+// window.dasdsadadasdasd2 =()=>{
+// 	router.isReady().then(()=>{
+// 		preloadRoutes('customTabbarHomeChild').then(res=>{
+// 			console.log(res)
+// 		});
+// 	})
+// }
 
 export default router

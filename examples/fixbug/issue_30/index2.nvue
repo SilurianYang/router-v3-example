@@ -1,0 +1,33 @@
+<template>
+	<view>
+		<web-view src="http://192.168.0.2:5500/index.html" class="webview" :webview-styles="webviewStyles" ></web-view>
+	</view>
+</template>
+
+<script>
+	export default {
+		data(){
+			return {
+				webviewStyles: {
+					progress: {
+						color: '#FF3333',
+					},
+				}
+			}
+		},
+		onLoad(){
+			console.log(`webview  - nvue 版本`)
+		},
+		onBackPress(...to) {
+			console.log(to)
+		}
+	}
+	
+</script>
+<style>
+	.webview{
+		flex: 1;
+		width:750px;
+		height:500px;
+	}
+</style>

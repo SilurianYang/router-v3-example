@@ -231,6 +231,50 @@ export const fixbugRoutes = [
 			pageType: `top`,
 		}),
 	},
+	{
+		path: `/issues_30/bug`,
+		name: `issues_30bug`,
+		component: __dynamicImportComponent__(`~@/examples/fixbug/issue_30/index.vue`, {
+			pageType: `top`,
+		}),
+		meta:{
+			menus:{
+				navInfo:{
+					name:`issues_30bug`,
+				},
+				title:`issues_30 + 【APP】`
+			},
+		},
+	},
+	{
+		path: `/issues_30/bug/index_vue`,
+		name: `issues_30bug_index_vue`,
+		component: __dynamicImportComponent__(`~@/examples/fixbug/issue_30/index1.vue`, {
+			pageType: `top`,
+		}),
+	},
+	{
+		path: `/issues_30/bug/index_nvue`,
+		name: `issues_30bug_index_nvue`,
+		component: __dynamicImportComponent__(`~@/examples/fixbug/issue_30/index2.nvue`, {
+			pageType: `top`,
+		}),
+	},
+	{
+		path: `/issue_34/bug/index_vue`,
+		name: `issue_34bug`,
+		component: __dynamicImportComponent__(`~@/examples/fixbug/issue_34/index.vue`, {
+			pageType: `top`,
+		}),
+		meta:{
+			menus:{
+				navInfo:{
+					name:`issue_34bug`,
+				},
+				title:`issues_34 + 【小程序】`
+			},
+		},
+	}
 ]
 
 export function createMenus(){

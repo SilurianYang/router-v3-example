@@ -254,6 +254,30 @@
 					</view>
 				</uni-collapse-item>
 				
+				
+				
+				<uni-collapse-item title="子路由自动解析参数" :show-animation="true">
+					<view class="content container noPaddingTop">
+						<uni-section title="小试牛刀" type="line" class="margin-bottom-sm noPaddingTop">
+							<uni-list>
+								<uni-list-item
+									title="马上去试试" 
+									showArrow :clickable="true"
+									:show-extra-icon="true"
+									@click="goToPage({
+										name:`auto_params`,
+									})"
+									:extra-icon="{
+												color: '#4cd964',
+												size: '22',
+												type: 'gear-filled'
+											}"
+								></uni-list-item>	
+							</uni-list>
+						</uni-section>
+					</view>
+				</uni-collapse-item>
+				
 			</uni-collapse>
 			
 		</uni-section>

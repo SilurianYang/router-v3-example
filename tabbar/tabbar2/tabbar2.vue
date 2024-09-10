@@ -72,6 +72,13 @@
 					content:msg,
 					showCancel:false
 				})
+			},
+			notify(msg){
+				uni.showModal({
+					title:`上帝函数通知`,
+					content:msg,
+					showCancel:false
+				})
 			}
 		}
 	}

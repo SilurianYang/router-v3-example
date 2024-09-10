@@ -4,6 +4,24 @@ import {
 
 export const paramsRoutes = [
 	{
+		path:`/auto/params`,
+		name:`auto_params`,
+		component:__dynamicImportComponent__(`~@/examples/params/auto.vue`,{
+			pageType: `top`
+		}),
+		children:[{
+			path:`op_auto/:id`,
+			name:`child_op_auto_params`,
+			 props: true,  
+			component: __dynamicImportComponent__(`@/examples/params/child/option_auto_child.vue`)
+		},{
+			path:`po_auto/:id`,
+			name:`child_po_auto_params`,
+			 props: true,  
+			component: __dynamicImportComponent__(`@/examples/params/child/po_auto_child.vue`)
+		}]
+	},
+	{
 		path:`/params`,
 		name:`params`,
 		component:__dynamicImportComponent__(`~@/examples/params/index.vue`,{
