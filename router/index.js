@@ -150,19 +150,19 @@ router.beforeEach(async (to,from)=>{
 	
 	changeFloat(`load`,to);
 	
-	// #ifdef MP
-	if(appRunCount === 0){
-		await timeOut(1000)
-	}
-	appRunCount++
-	// #endif
+	// // #ifdef MP
+	// if(appRunCount === 0){
+	// 	await timeOut(1000)
+	// }
+	// appRunCount++
+	// // #endif
 	
-	// #ifdef APP
-	if(appRunCount === 0){
-		await timeOut(5000)
-	}
-	appRunCount++
-	// #endif
+	// // #ifdef APP
+	// if(appRunCount === 0){
+	// 	await timeOut(5000)
+	// }
+	// appRunCount++
+	// // #endif
 	
 	
 })
@@ -186,33 +186,5 @@ router.afterEach(async (to,from)=>{
 router.onError(e=>{
 	console.log(e)
 })
-
-window.dasdsadadasdasd = (name)=>{
-	 parserInstance(name,[
-	    (instance)=>{
-	      instance.notify(`来自星星的它`)
-		  // instance.$.exposed.notify(`来自星星的它`);
-	    }
-	  ]) || uni.showToast({
-		title:`${name}页面未挂载`,
-		icon:"error",
-	})
-};
-
-// window.dasdsadadasdasd =()=>{
-// 	router.isReady().then(()=>{
-// 		preloadRoutes(['customTabbarHomeChild','customTabbarClass','customTabbarRelease','customTabbarNews','customTabbarMe']).then(res=>{
-// 			console.log(res)
-// 		});
-// 	})
-// }
-
-// window.dasdsadadasdasd2 =()=>{
-// 	router.isReady().then(()=>{
-// 		preloadRoutes('customTabbarHomeChild').then(res=>{
-// 			console.log(res)
-// 		});
-// 	})
-// }
 
 export default router
