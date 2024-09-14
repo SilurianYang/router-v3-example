@@ -1,7 +1,5 @@
 {
-  "pages": [{
-    "path": "inspect/loading"
-  }],
+  "pages": [],
   "tabBar": {
     "color": "#7A7E83",
     "selectedColor": "#3cc51f",
@@ -21,7 +19,9 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8",
     "app-plus": {
-      "popGesture": "none"
+      "popGesture": "none",
+	  "animationDuration": 300,
+	  "animationType": "slide-in-bottom"
     }
   },
   "easycom": {

@@ -70,7 +70,7 @@ const router = createRouter({
 	},
 	app:{
 		setSideSlipGesture:(to)=>{
-			return `close`
+			return 'close'
 		},
 		runtimeQuit:androidQuitApp
 	},
@@ -144,6 +144,8 @@ const router = createRouter({
 })
 let appRunCount = 0
 router.beforeEach(async (to,from)=>{
+	appRunCount++
+	
 	console.error(`------- beforeEach守卫执行 ------`)
 	console.log(to)
 	console.log(from)
@@ -158,11 +160,14 @@ router.beforeEach(async (to,from)=>{
 	// // #endif
 	
 	// // #ifdef APP
-	// if(appRunCount === 0){
-	// 	await timeOut(5000)
+	// if(appRunCount === 1){
+	// 	return {
+	// 		name:'myLoginXxxx',
+	// 		navType:'replaceAll'
+	// 	}
 	// }
-	// appRunCount++
 	// // #endif
+	
 	
 	
 })
